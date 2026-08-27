@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter Replacer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Letter Replacer</h1>
+    <p class="subtitle">Paste your text below and check which letters you want to replace with their Cyrillic lookalikes.</p>
+
+    <section class="options">
+      <h2>Select letters to replace</h2>
+      <div class="checkboxes" id="checkboxes">
+        <label class="option">
+          <input type="checkbox" data-letter="A">
+          <span>A &rarr; аА</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="E">
+          <span>E &rarr; еЕ</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="Y">
+          <span>Y &rarr; уУ</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="K">
+          <span>K &rarr; кК</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="H">
+          <span>H &rarr; нН</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="X">
+          <span>X &rarr; хХ</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="B">
+          <span>B &rarr; вВ</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="P">
+          <span>P &rarr; рР</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="O">
+          <span>O &rarr; оО</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="M">
+          <span>M &rarr; мМ</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="C">
+          <span>C &rarr; сС</span>
+        </label>
+        <label class="option">
+          <input type="checkbox" data-letter="T">
+          <span>T &rarr; тТ</span>
+        </label>
+      </div>
+      <div class="actions">
+        <button id="select-all">Select All</button>
+        <button id="deselect-all" class="ghost">Deselect All</button>
+      </div>
+    </section>
+
+    <section class="editor">
+      <label for="input">Original text</label>
+      <textarea id="input" placeholder="Paste your text here..."></textarea>
+    </section>
+
+    <button id="replace" disabled>Replace Letters</button>
+
+    <section class="editor">
+      <label for="output">Result</label>
+      <div id="output" class="output" aria-live="polite"></div>
+      <button id="copy" disabled>Copy Result</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
